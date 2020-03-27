@@ -1,5 +1,5 @@
 import { InvokeCommand, LambdaClient } from "@aws-sdk/client-lambda";
-import { isYesterday } from "date-fns";
+import { isYesterday, parseISO } from "date-fns";
 
 const lambda = new LambdaClient({ region: "eu-west-2" });
 
@@ -7,7 +7,7 @@ test("Is it yesterday?", async () => {
   try {
     expect.assertions(1);
 
-    const invokeCommand = new InvokeCommand({ FunctionName: "A" });
+    const invokeCommand = new InvokeCommand({ FunctionName: "B" });
 
     const invokeCommandResponse = await lambda.send(invokeCommand);
 
@@ -20,7 +20,7 @@ test("Is it yesterday?", async () => {
         throw new Error(payload.errorMessage);
       }
 
-      expect(isYesterday(payload.yesterday)).toBeTruthy();
+      expect(isYesterday(parseISO(payload.yesterday))).toBeTruthy();
     } else {
       throw new Error("No response payload");
     }
