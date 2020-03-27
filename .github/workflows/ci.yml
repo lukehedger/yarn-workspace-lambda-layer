@@ -35,7 +35,10 @@ jobs:
           ${{ runner.OS }}-
 
     - name: Install dependencies
-      run: yarn install --no-progress --non-interactive
+      run: yarn install --no-progress --non-interactive --silent
+
+    - name: Install dependencies for Lambda Layer
+      run: sh scripts/deps-layer.sh
 
     - name: Build workspace
       run: yarn build
