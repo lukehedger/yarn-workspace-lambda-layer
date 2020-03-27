@@ -1,0 +1,16 @@
+# OS files
+.DS_Store
+
+# Log files
+*.log
+
+# Dependencies
+node_modules
+
+# Generated files
+.cdk.staging
+cdk.out
+**/bin/**/*.d.ts
+**/bin/**/*.js
+**/lib/**/*.d.ts
+**/lib/**/*.js

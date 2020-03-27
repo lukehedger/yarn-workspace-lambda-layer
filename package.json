@@ -1,0 +1,26 @@
+{
+  "name": "cdk-init",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "cdk deploy",
+    "destroy": "cdk destroy",
+    "diff": "cdk diff",
+    "synth": "cdk synth",
+    "test": "jest",
+    "watch": "tsc -w"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.31.0",
+    "@types/jest": "25.1.4",
+    "@types/node": "12.12.31",
+    "aws-cdk": "1.31.0",
+    "jest": "25.2.3",
+    "ts-jest": "25.2.1",
+    "typescript": "3.8.3"
+  },
+  "dependencies": {
+    "@aws-cdk/core": "1.31.0"
+  }
+}
