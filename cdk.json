@@ -1,4 +1,0 @@
-{
-  "app": "node bin/cdk-init.js",
-  "versionReporting": false
-}

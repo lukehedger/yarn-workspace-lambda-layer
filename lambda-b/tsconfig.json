@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "module": "commonjs",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "bin",
+    "strict": true,
+    "target": "ES2018",
+    "typeRoots": ["../node_modules/@types"]
+  },
+  "exclude": ["**/__tests__"]
+}

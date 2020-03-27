@@ -12,6 +12,13 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: eu-west-2
+
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
@@ -30,11 +37,11 @@ jobs:
     - name: Install dependencies
       run: yarn install --no-progress --non-interactive
 
-    - name: Build
+    - name: Build workspace
       run: yarn build
 
-    - name: Synth
-      run: yarn synth
+    - name: Deploy cloud infrastructure
+      run: yarn --cwd cloud-infrastructure deploy --no-staging --require-approval never
 
-    - name: Test
+    - name: Test workspace
       run: yarn test
