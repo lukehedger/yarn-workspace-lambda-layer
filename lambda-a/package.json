@@ -2,10 +2,7 @@
   "name": "lambda-a",
   "private": true,
   "version": "0.0.0",
-  "main": "lib/a.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "main": "bin/a.js",
   "scripts": {
     "build": "tsc",
     "test": "jest"

@@ -9,6 +9,7 @@
     "test": "yarn workspaces run test"
   },
   "workspaces": [
+    "util-logger",
     "cloud-infrastructure",
     "lambda-a",
     "lambda-b"

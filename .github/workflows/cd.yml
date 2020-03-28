@@ -1,13 +1,12 @@
-name: CI
+name: CD
 
 on:
-  pull_request:
+  push:
     branches:
     - master
-    types: [opened]
 
 jobs:
-  ci:
+  cd:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v1
@@ -45,6 +44,3 @@ jobs:
 
     - name: Deploy cloud infrastructure
       run: yarn --cwd cloud-infrastructure deploy --no-staging --require-approval never
-
-    - name: Test workspace
-      run: yarn test
