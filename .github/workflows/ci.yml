@@ -37,11 +37,11 @@ jobs:
     - name: Install dependencies
       run: yarn install --no-progress --non-interactive --silent
 
-    - name: Install dependencies for Lambda Layer
-      run: sh scripts/deps-layer.sh
-
     - name: Build workspace
       run: yarn build
+
+    - name: Install dependencies for Lambda Layer
+      run: sh scripts/deps-layer.sh
 
     - name: Deploy cloud infrastructure
       run: yarn --cwd cloud-infrastructure deploy --no-staging --require-approval never

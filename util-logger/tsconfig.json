@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "declaration": true,
+    "declarationDir": "bin",
     "inlineSourceMap": true,
     "inlineSources": true,
     "module": "commonjs",
@@ -9,12 +10,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "bin",
-    "paths": {
-      "/opt/nodejs/*": ["../*"]
-    },
     "strict": true,
     "target": "ES2018",
     "typeRoots": ["../node_modules/@types"]
-  },
-  "exclude": ["**/__tests__"]
+  }
 }

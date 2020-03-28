@@ -14,3 +14,4 @@ cdk.out
 **/bin/**/*.js
 **/lib/**/*.d.ts
 **/lib/**/*.js
+lambda-layer/nodejs/**

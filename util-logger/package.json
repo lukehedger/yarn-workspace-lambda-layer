@@ -1,15 +1,16 @@
 {
-  "name": "lambda-b",
+  "name": "util-logger",
   "private": true,
   "version": "0.0.0",
-  "main": "bin/b.js",
+  "main": "bin/logger.js",
+  "types": "bin/logger.d.ts",
   "directories": {
     "bin": "bin",
     "lib": "lib"
   },
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "exit 0"
   },
   "devDependencies": {
     "@aws-sdk/client-lambda": "1.0.0-beta.1",
