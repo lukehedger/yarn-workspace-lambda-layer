@@ -3,10 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "main": "bin/a.js",
-  "directories": {
-    "bin": "bin",
-    "lib": "lib"
-  },
   "scripts": {
     "build": "tsc",
     "test": "jest"

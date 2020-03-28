@@ -4,10 +4,6 @@
   "version": "0.0.0",
   "main": "bin/logger.js",
   "types": "bin/logger.d.ts",
-  "directories": {
-    "bin": "bin",
-    "lib": "lib"
-  },
   "scripts": {
     "build": "tsc",
     "test": "exit 0"
