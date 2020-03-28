@@ -12,4 +12,5 @@ rm -rf \
   lambda-layer/nodejs/node_modules/util-logger
 
 # Copy common utilities
-cp -r util-logger/bin lambda-layer/nodejs/util-logger
+cp -r util-logger/bin/ lambda-layer/nodejs/util-logger
+echo '{"main": "logger.js"}' > lambda-layer/nodejs/util-logger/package.json
