@@ -41,7 +41,7 @@ jobs:
       run: yarn build
 
     - name: Install dependencies for Lambda Layer
-      run: sh scripts/deps-layer.sh
+      run: yarn layer
 
     - name: Deploy cloud infrastructure
       run: yarn --cwd cloud-infrastructure deploy --no-staging --require-approval never
