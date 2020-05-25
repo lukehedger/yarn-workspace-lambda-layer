@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Install Yarn workspace dependencies to Lambda Layer directory
-yarn install --flat --modules-folder lambda-layer/nodejs/node_modules --no-progresss --non-interactive --production --silent
+yarn install --flat --modules-folder lambda-layer/nodejs/node_modules --no-progress --non-interactive --production --silent
 
 # Remove workspace directories from Lambda Layer node_modules
 # to prevent circular references
